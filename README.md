@@ -1,40 +1,33 @@
-🤖 Legal AI Assistant (RAG Chatbot)
-An end-to-end full-stack AI chatbot that provides accurate legal information by leveraging a Retrieval-Augmented Generation (RAG) model. This platform uses a custom knowledge base to deliver context-aware responses and features a complete text-to-speech (TTS) and speech-to-text (STT) pipeline.
+# Legal AI Assistant (RAG Chatbot)
 
-🚀 Features
-Retrieval-Augmented Generation (RAG): The core of the system, enabling the chatbot to generate informed responses based on a provided set of legal documents.
+An end-to-end full-stack AI chatbot that provides accurate legal information by leveraging a Retrieval-Augmented Generation (RAG) model. This platform uses a custom knowledge base to deliver context-aware responses and features a complete text-to-speech (TTS) and speech-to-text (STT) pipeline. 
 
-Vector Database Integration: Efficient semantic search and retrieval using a Pinecone vector database.
+## 🚀 Features
 
-Speech-to-Text (STT): Real-time voice input using the Web Speech API for a hands-free user experience.
+* **Retrieval-Augmented Generation (RAG):** The core of the system, enabling the chatbot to generate informed responses based on a provided set of legal documents.
+* **Vector Database Integration:** Efficient semantic search and retrieval using a Pinecone vector database.
+* **Speech-to-Text (STT):** Real-time voice input using the Web Speech API for a hands-free user experience.
+* **Text-to-Speech (TTS):** Dynamic audio responses powered by the OpenAI API, providing an interactive conversational experience.
+* **Full-Stack Architecture:** A complete web application built with a Flask backend and a modern JavaScript/HTML/CSS frontend.
 
-Text-to-Speech (TTS): Dynamic audio responses powered by the OpenAI API, providing an interactive conversational experience.
+## ⚙️ Technology Stack
 
-Full-Stack Architecture: A complete web application built with a Flask backend and a modern JavaScript/HTML/CSS frontend.
+**Backend:**
+* **Python:** Primary programming language.
+* **Flask:** Web framework for the RESTful API.
+* **OpenAI API:** For LLM orchestration, embeddings, and TTS.
+* **Pinecone:** Vector database for indexing and querying legal documents.
 
-⚙️ Technology Stack
-Backend:
+**Frontend:**
+* **HTML, CSS, JavaScript:** For the user interface.
+* **Web Speech API:** For speech-to-text functionality.
+* **Font Awesome:** For icons.
 
-Python: Primary programming language.
+## 📦 Setup and Installation
 
-Flask: Web framework for the RESTful API.
-
-OpenAI API: For LLM orchestration, embeddings, and TTS.
-
-Pinecone: Vector database for indexing and querying legal documents.
-
-Frontend:
-
-HTML, CSS, JavaScript: For the user interface.
-
-Web Speech API: For speech-to-text functionality.
-
-Font Awesome: For icons.
-
-📦 Setup and Installation
 Follow these steps to get the project running on your local machine.
 
-1. Clone the Repository
+### **1. Clone the Repository**
 Bash
 
 git clone https://github.com/your-username/your-repo-name.git

@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+    --primary-color: #4CAF50;
+    --background-color: #f4f7f6;
+    --chat-bg: #fff;
+    --user-message-bg: #e2f1ff;
+    --ai-message-bg: #f0f0f0;
+    --border-color: #e0e0e0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.chat-container {
+    background-color: var(--chat-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chat-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.chat-history {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.chat-history::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chat-history::-webkit-scrollbar-thumb {
+    background-color: var(--border-color);
+    border-radius: 4px;
+}
+
+.message {
+    padding: 10px 15px;
+    border-radius: 20px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.user-message {
+    align-self: flex-end;
+    background-color: var(--user-message-bg);
+    border-bottom-right-radius: 5px;
+}
+
+.ai-message {
+    align-self: flex-start;
+    background-color: var(--ai-message-bg);
+    border-bottom-left-radius: 5px;
+}
+
+.chat-form {
+    display: flex;
+    padding: 15px;
+    border-top: 1px solid var(--border-color);
+    gap: 10px;
+}
+
+#user-input {
+    flex-grow: 1;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 10px 15px;
+    font-size: 16px;
+    outline: none;
+}
+
+#send-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 18px;
+}
+
+#send-btn:hover {
+    background-color: #45a049;
+}
+.typing-indicator {
+    font-style: italic;
+    color: #888;
+}
+
+
+
+
+/* ... (existing styles) ... */
+
+#mic-btn {
+    background-color: #f4f7f6; /* A light color */
+    color: var(--primary-color);
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mic-btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+#mic-btn.active {
+    background-color: #ff4c4c; /* Red color when active */
+    color: white;
+    animation: pulse 1.5s infinite;
+}
+
+/* Typing Indicator Styling */
+.typing-indicator {
+    font-style: italic;
+    color: #888;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* --- Styling for the new play button --- */
+/* ... (existing styles) ... */
+
+/* --- Styling for the new play button --- */
+/* Update your .ai-message class */
+.ai-message {
+    background-color: #e2f0e2; /* light green */
+    align-self: flex-start;
+    position: relative; /* Make this the positioning context for the button */
+    padding-right: 35px; /* Add space for the button */
+}
+
+/* New styling for the play button at the corner */
+.play-audio-btn {
+    position: absolute; /* Position the button relative to its parent (.ai-message) */
+    bottom: 5px; /* Adjust as needed */
+    right: 5px; /* Adjust as needed */
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.3s ease;
+}
+
+.play-audio-btn:hover {
+    color: #0056b3;
+}
